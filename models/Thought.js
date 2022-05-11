@@ -5,7 +5,7 @@ const ReactionSchema = new Schema(
     {
         reactionId: {
             type: Schema.Types.ObjectId,
-            default: () => Types.ObjectId()
+            default: () => new Types.ObjectId()
         },
         reactionBody: {
             type: String,
@@ -25,7 +25,8 @@ const ReactionSchema = new Schema(
     {
         toJSON: {
             getters: true
-        }
+        },
+        id: false
     }
 );
 
@@ -58,7 +59,7 @@ const ThoughtSchema = new Schema(
 );
 
 ThoughtSchema.virtual('reactionCount').get(function() {
-    return this.replies.length;
+    return this.reactions.length;
 });
 
 const Thought = model('Thought', ThoughtSchema);
