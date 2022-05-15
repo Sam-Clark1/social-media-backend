@@ -2,7 +2,7 @@
 
   <img src="https://img.shields.io/badge/license-MIT-blue" alt="badge"></img>
   
-# social-network-api
+# social-media-backend
 
 ## Description
 An application that utilizes node.js, express.js, mongoDB and mongoose to make the foundation for the back end of a social media  website. Uses models from mongoose to create users and thoughts made by users. Can also have users add friends and create reactions to other users thoughts. Uses routes from express to satisfy CRUD methods for both the user and thought models.
